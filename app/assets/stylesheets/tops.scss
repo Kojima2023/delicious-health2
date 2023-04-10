@@ -1,0 +1,362 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// .tops_background-image {
+//     background-image: url(夜ご飯2.jpg);
+//     height: 100px;
+//     width: 100px;
+//     background-size: 100% 100%;
+// }
+
+// .header-left img {
+//     display: none;
+// }
+
+
+// header関連
+// html,body{
+//   margin:0;
+//   height:120%;
+// }
+
+.tops header {
+    background-color: #FAF4ED;
+    // background-image: image-url('dinner.jpg');
+    background: url('dinner.jpg');
+    background-size: cover;
+    height: 700px;
+    position: relative;
+}
+
+// .tops header{/*ヘッダ部分*/
+//   position:relative;
+//   //overflow:hidden;
+//   //display:flex;
+//   //flex-wrap: wrap;
+//   //justify-content: center;
+//   //align-items: flex-start;
+//   //align-content: flex-start;
+//   background-color: #FAF4ED;
+//   height: 700px;
+//   //height:50vw;
+//   min-height:680px;
+//   max-height:700px;
+//   min-width:300px;
+//   //color:#eee;
+// }
+// .tops .header:after{/*下部にうっすらグラデーションで影を作る*/
+//   content:"";
+//   width:100%;
+//   height:40%;
+//   position:absolute;
+//   bottom:0;
+//   left:0;
+//   z-index:-1;
+//   //background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(27,32,48,1) 100%);
+// }
+// .tops .header:before{/*疑似要素に背景画像を指定、常時アニメーションさせつつ、スクロール時は固定*/
+//   content:"";
+//   width:100%;
+//   height:100%;
+//   position:absolute;
+//   top:0;
+//   left:0;
+//     -webkit-backface-visibility: hidden;
+//     -webkit-transform: translateZ(0) scale(1.0, 1.0);
+//     transform: translateZ(0);
+//   background: url('dinner.jpg') top center no-repeat;
+//   background-size:cover;
+//   background-attachment:fixed;
+//   animation: grow 60s  linear 10ms infinite;
+//   transition:all 0.2s ease-in-out;
+//   z-index:-2
+// }
+// @keyframes grow{/*微差で拡大/縮小するアニメーション設定*/
+//   0% { transform:scale(1)}
+//   50% { transform:scale(1.2)}
+// }
+// .tops .content{  
+//   padding:5% 10%;
+//   text-align:justify
+// }
+
+.tops .header-left {
+    margin-left: 5px;
+    // animation-name: anim_sc;
+    // transform: scale(1.0,1.0);
+}
+
+.tops .header-left img {
+    border-radius: 10%;
+    margin-bottom: 490px;
+}
+
+.tops .header-list {
+    width: fit-content;
+    height: 50px;
+    background-color: #3B0B11;
+    margin-right: 90px;
+    border-radius: 12px;
+    margin-bottom: 580px;
+}
+.tops .header-list ul {
+    margin-right: 0px;
+}
+.tops .header-list li {
+    margin-top: 17px;
+}
+
+.tops .header-subtitle {
+    background-color: rgba($color: white, $alpha: 0.75);
+    color: #3B0B11;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 15px;
+    position: absolute;
+    z-index: 100;
+    top: 270px;
+    left: 500px;
+}
+
+// メイン部分
+.tops .wave1 {
+    margin-top: -65px;
+    position: relative;
+}
+
+.tops .wave1 img {
+    width: 1440px;
+}
+
+.tops h2 {
+    color: #3B0B11;
+    font-size: 40px;
+    margin-bottom: 28px;
+}
+
+.tops h3 {
+    color: #3B0B11;
+    font-size: 28px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+.tops li {
+    font-family: 'Noto Sans Japanese', 'Noto Sans', sans-serif;
+    color: #3B0B11;
+    line-height: 20px
+}
+
+.tops-about {
+    display: flex;
+    justify-content: center;
+    margin-top: -120px;
+    position: relative;
+    //margin-bottom: 100px;
+}
+
+.tops-about-text {
+    width: 500px;
+    height: 288px;
+    background-color: white;
+    margin-top: 75px;
+    margin-left: 10px;
+    margin-right: 50px;
+    padding: 30px;
+    border-radius: 15px;
+}
+.tops-about-text h2 {
+    text-align: center;
+}
+.tops-about-text-body {
+    color: #3B0B11;
+}
+.tops-about-text-body li {
+    list-style: none;
+    font-size: 16px;
+}
+
+.tops .wave2 {
+    margin-top: 40px;
+}
+
+.tops .wave2 img {
+    width: 1440px;
+}
+
+.tops .tops-how-to-background {
+    background-color: #F1EBE4;
+    position: relative;
+    height: 900px;
+}
+
+.tops .tops-how-to {
+    width: 1200px;
+    height: 682px;
+    background-color: white;
+    //position: absolute;
+    margin-top: -60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+.tops .tops-how-to h2 {
+    text-align: center;
+}
+.tops-how-to-body li {
+    font-size: 16px;
+    color: #3B0B11;
+    margin-left: 3px;
+    //margin-bottom: 3px;
+}
+.tops-how-to-li-none {
+    list-style: none;
+}
+.tops-how-to-li-none a {
+    text-decoration: underline;
+}
+.tops-how-to-li-none a:hover {
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+}
+.tops-how-to-li-disc {
+    margin-left: 30px;
+}
+.tops-how-to-message {
+    margin-top: 28px;
+    margin-bottom: 32px;
+}
+.tops-how-to-tomolidex {
+    text-align: center;
+}
+.tops-how-to-tomolidex a {
+    background-color: #3B0B11;
+    padding: 8px 15px 8px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+}
+.tops-how-to-tomolidex a:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+    //background-color: #66452F;
+}
+.tops-how-function-img {
+    position: absolute;
+    z-index: 100;
+    margin-top: 360px;
+    margin-left: 610px;
+}
+.tops-how-function-img img {
+    border-radius: 15px;
+}
+.tops-how-rabbit-img {
+    transform: scale(-1, 1);
+    margin-top: -200px;
+    margin-left: 1160px;
+    width: 200px;
+}
+
+.tops .wave3 {
+    //background-color: #F1EBE4;
+    margin-top: -80px;
+    position: relative;
+}
+
+.tops .wave3 img {
+    width: 1440px;
+}
+
+.tops-promotion {
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+    margin-bottom: -60px;
+}
+.tops-promotion-img {
+    position: relative;
+    margin-top: -40px;
+    margin-left: -40px;
+}
+.tops-promotion-text {
+    width: 620px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    margin-top: 70px;
+    margin-left: -60px;
+    padding: 30px;
+    border-radius: 15px;
+}
+.tops-promotion h2 {
+    text-align: center;
+}
+.tops-promotion li {
+    list-style: none;
+    margin-bottom: 28px;
+}
+.tops-promotion-message-font {
+    color: rgb(236, 113, 8);
+}
+
+.tops-logo {
+    //text-align:center;
+    //margin-top: -10px;
+    //margin-bottom: -10px;
+    margin-left: 50px;
+}
+
+.tops-notes {
+    display: flex;
+    justify-content: center;
+}
+.tops-notes-text {
+    width: 660px;
+    height: 270px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    padding: 30px;
+    border-radius: 15px;
+}
+.tops-notes h2 {
+    text-align: center;
+}
+.tops-notes li {
+    list-style: none;
+    margin-bottom: 28px;
+    text-indent: -30px;
+    margin-left: 30px;
+}
+.tops-notes-3 {
+    margin-top: -28px;
+    margin-left: 30px;
+}
+.tops-notes-img {
+    margin-top: -260px;
+}
+
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9000;
+    background-image: url('/assets/start_img1.JPG');
+    background-size: cover;
+}
+.start p {
+	position: fixed;
+	left: 52%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+	width: 280px;
+}

@@ -1,0 +1,154 @@
+<h1><%= @user.name %>のマイページ</h1>
+
+<div class="user-info">
+  <h3>ユーザ情報</h3>
+  <div class="user-info-show">
+    <div class="user-info-img1">
+      <%= image_tag @user.image_url if @user.image? %>
+    </div>
+    <div class="user-info-text">
+      <p>名前（ニックネーム） : <%= @user.name %></p>
+      <p>自己紹介 : <br><%= @user.profile %></p>
+      <p>メールアドレス : <%= @user.email %></p>
+      <p>リンク情報 : <br><a href="<%= @user.user_url %>"><%= @user.user_url %></a></p>
+    </div>
+    <div class="user-info-img2">
+        <img src="/assets/deli-happy.png" width="330" >
+    </div>
+  </div>
+
+  <div class="user-show-link">
+  <% if user_signed_in? %>
+    <% if current_user.id == @user.id %>
+      <%= link_to "プロフィールを編集", edit_user_registration_path %>
+      <%= link_to "♡投稿したレシピ", user_path(current_user.id) %>
+    <% end %>
+  <% end %>
+  </div>
+</div>
+
+<div class="wave1">
+    <img src="/assets/wave2.png" >
+</div>
+
+<div class="tomorecipes-body">
+  <h3>美食ヘルスケアの投稿で♡いいね保存したレシピ</h3>
+  <div class="tomorecipes-container">
+    <% @user.liked_tomorecipes.each do |t| %>
+      <div class="tomorecipe">
+
+        <div class="tomorecipe-main-img">
+          <% if t.image.present? %>
+            <a href="/tomorecipes/<%= t.id %>"><%= image_tag t.image_url if t.image? %></a>
+          <% else %>
+            <a href="/tomorecipes/<%= t.id %>"><img src="/assets/none_img.jpg" width="200" ></a>
+          <% end %>
+        </div>
+
+        <!-- <%= video_tag t.video_url, size: "250x200" ,:controls => true if t.video?%>> -->
+
+        <% if t.user.image_url.present? %>
+          <div class="tomorecipe-user">
+            <%= link_to (image_tag t.user.image_url, class: "user-icon" if t.user.image?), user_path(t.user.id) %>
+            <%= link_to t.user.name, user_path(t.user.id) %>
+          </div>
+        <% else %>
+          <div class="tomorecipe-user-non-icon">
+            <%= link_to t.user.name, user_path(t.user.id) %>
+          </div>
+        <% end %>
+        
+        <div class="tomorecipe-info">
+          <div class="tomorecipe-title-save">
+            <div class="tomorecipe-title">
+              <%= t.title %>
+            </div>
+            <div class="tomorecipe-save">
+              <% if user_signed_in? %>
+                <% if current_user.already_liked?(t) %>
+                  <%= link_to tomorecipe_like_path(id: t.id, tomorecipe_id: t.id), method: :delete do %>
+                      <i class="fas fa-heart already-heart"></i><%= t.likes.count %>
+                  <% end %>
+                <% else %>
+                  <%= link_to tomorecipe_likes_path(id: t.id, tomorecipe_id: t.id), method: :tomorecipe do %>
+                    <i class="fa-regular fa-heart"></i><%= t.likes.count %>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <i class="fa-regular fa-heart"></i><%= t.likes.count %>
+              <% end %>
+            </div>
+          </div>
+        
+          <div class="tomorecipe-hashtag">
+            <% t.tags.each do |tag| %>
+              <%= link_to "#" + tag.tag_name, tag_tomorecipes_path(tag_id: tag.id) %>
+            <% end %>
+          </div>
+
+          <div class="tomorecipe-edit">
+            <% if user_signed_in? && current_user.id == t.user_id %>
+              <%= link_to "編集する", edit_tomorecipe_path(t.id) %>
+              <%= link_to "削除する", tomorecipe_path(t.id), method: :delete %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <h3>外部サイトのレシピで♡いいね保存した一覧</h3>
+  <div class="tomorecipes-container">
+    <% @user.like2ed_external_sites.each do |e| %>
+      <div class="tomorecipe">
+
+        <div class="tomorecipe-main-img">
+          <% if e.img_url ==  "https://assets.cpcdn.com/assets/blank_logo_recipe.png?ca0f825673a3906055fa88696811deee08ec55ec50b3e08161f4e35baeedf358" %>
+            <a href="<%= e.recipe_url %>"><img src="/assets/none_img.jpg" width="200" ></a>
+          <% elsif e.img_url == nil %>
+            <a href="<%= e.recipe_url %>"><img src="/assets/none_img.jpg" width="200" ></a>
+          <% else %>
+            <a href="<%= e.recipe_url %>"><img src="<%= "#{e.img_url}" %>"></a>
+          <% end %>
+        </div>
+
+        <div class="tomorecipe-info">
+          <div class="external-url">
+            <a href="<%= e.recipe_url %>"><%= e.recipe_url %></a>
+          </div>
+      
+          <div class="tomorecipe-title-save">
+            <div class="tomorecipe-title">
+              <%= e.title %>
+            </div>
+            <div class="tomorecipe-save">
+              <% if user_signed_in? %>
+                <% if current_user.already_like2ed?(e) %>
+                  <%= link_to external_site_like2_path(id: e.id, external_site_id: e.id), method: :delete do %>
+                    <i class="fas fa-heart already-heart"></i><%= e.like2s.count %>
+                  <% end %>
+                <% else %>
+                  <%= link_to external_site_like2s_path(id: e.id, external_site_id: e.id), method: :post do %>
+                    <i class="fa-regular fa-heart"></i><%= e.like2s.count %>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <i class="fa-regular fa-heart"></i><%= e.like2s.count %>
+              <% end %>
+            </div>
+          </div>
+
+          <div class="tomorecipe-hashtag">
+            <% e.tags.each do |tag| %>
+              <%= link_to "#" + tag.tag_name, tag_external_sites_path(tag_id: tag.id) %>
+            <% end %>
+          </div>
+        
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="tomorecipe-blank">
+</div>

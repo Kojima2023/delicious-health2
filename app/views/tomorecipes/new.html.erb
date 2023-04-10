@@ -1,0 +1,88 @@
+<div class="post1">
+  <img src="/assets/post1.png" width="550" >
+</div>
+
+<div class="tomorecipe-post">
+  <h1 class="tomorecipe-post-h1">新規投稿ページ</h1>
+
+  <%= form_with(model: @tomorecipe, url: tomorecipes_path, local: true) do |f| %>
+    
+    <div class="post-field">
+      <%= f.label :レシピのタイトル（入力必須） %><br />
+      <%= f.text_field :title, :size => 40 %>
+    </div>
+
+    <h3>検索カテゴリ</h3>
+    <%= f.select :category, [["病気", "病気"], ["食物アレルギー・食物不耐症", "食物アレルギー・食物不耐症"], ["苦手", "苦手"], ["その他または理由なし", "その他または理由なし"]], include_blank: "どんな方向けですか？（原因・症状）" %>
+
+    <h3>ハッシュタグ（食べられない原因・症状）</h3>
+    <div class="post-hashtag-field">
+      <%= f.text_field :tag_name, placeholder: "糖尿病 卵アレルギー にんじん嫌い 金欠" %>
+    </div>
+    <p>※ 半角スペースを入力することで複数のハッシュタグを付けることができます。</p>
+
+    <div class="hashtag_attention">
+      <h3>ハッシュタグの注意事項</h3>
+      <p>「蕎麦・落花生・乳製品・卵・小麦・えび・かに」のアレルギーについては、食物アレルギー*」を記入するとユーザが検索しやすくなります。</p>
+      <p>「あわび・いくら・鮭・鯖・いか・くるみ・キウイフルーツ・りんご・大豆・カシューナッツ・ごま・鶏肉・豚肉・牛肉・ゼラチン・まつたけ・バナナ・山芋・桃・オレンジ」については、「食物アレルギー」を記入するとユーザが検索しやすくなります。</p>
+    </div>
+    
+    <h3>オリジナルレシピの画像</h3>
+    <div class="image-field">
+      <%= f.label :画像1 %>
+      <%= f.file_field :image %>
+      <%= f.label :画像2 %>
+      <%= f.file_field :image2 %>
+      <br />
+      <%= f.label :画像3 %>
+      <%= f.file_field :image3 %>
+      <%= f.label :画像4 %>
+      <%= f.file_field :image4 %>
+    </div>
+
+    <h3>オリジナルレシピの動画</h3>
+    <div class="field">
+      <%= f.label :動画 %>
+      <%= f.file_field :video %>
+    </div>
+
+    <div class="field">
+      <div class="field-area">
+        <%= f.label :材料  %><br />
+      </div>
+      <%= f.text_area :ingredient, :size => "30x2" %>
+    </div>
+
+    <div class="field">
+      <div class="field-area">
+        <%= f.label :レシピの詳細  %><br />
+      </div>
+      <%= f.text_area :recipe, :size => "30x2" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :所要時間 %><br />
+      <%= f.text_field :time, :size => 30 %>
+    </div>
+
+    <div class="field">
+      <div class="field-area">
+        <%= f.label :コツ・ポイント  %><br />
+      </div>
+      <%= f.text_area :point, :size => "30x2" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :費用 %><br />
+      <%= f.text_field :cost, :size => 30 %>
+    </div>
+
+    <div class="actions-submit">
+      <%= f.submit "投稿する" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="post2">
+  <img src="/assets/post2.png" width="450" >
+</div>

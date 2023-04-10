@@ -1,0 +1,385 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+// app/views/users/passwords/edit.html.erb
+// app/views/users/passwords/new.html.erb
+// app/views/users/sessions/new.html.erb
+// app/views/users/registrations/new.html.erb
+.login-wrapper {
+    background: url('login_background.jpg');
+    background-size: cover;
+    height: 1000px;
+    width: 1400px;
+    margin: 0 20px -10px 20px;
+    position: relative;
+}
+.login-wrapper-container {
+    background-color: rgba($color: #F1EBE4, $alpha: 0.75);
+    width: 600px;
+    //height: auto;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.actions {
+    input[type="submit"] {
+      width: 200px;
+      display: table;
+      font-size: 20px;
+      font-family: 'Zen Antique Soft', sans-serif;
+      margin: 10px auto 30px auto;
+      padding: 5px;
+      color: white;
+      background-color: #3B0B11;
+      border-radius: 8px;
+    }
+}
+.actions {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+}
+// app/views/users/passwords/edit.html.erb
+.actions-edit-passwords {
+    input[type="submit"] {
+        width: 300px;
+        display: table;
+        font-size: 24px;
+        font-family: 'Zen Antique Soft', sans-serif;
+        margin: 10px auto 40px auto;
+        padding: 5px;
+        color: white;
+        background-color: #3B0B11;
+        border-radius: 8px;
+    }
+}
+.actions-edit-passwords input:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+}
+// app/views/users/passwords/new.html.erb
+.actions-new-passwords {
+    input[type="submit"] {
+        width: 390px;
+        display: table;
+        font-size: 24px;
+        font-family: 'Zen Antique Soft', sans-serif;
+        margin: 10px auto 40px auto;
+        padding: 5px;
+        color: white;
+        background-color: #3B0B11;
+        border-radius: 8px;
+    }
+}
+.actions-new-passwords input:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+}
+// app/views/users/sessions/new.html.erb
+.actions-login {
+    input[type="submit"] {
+        width: 140px;
+        display: table;
+        font-size: 24px;
+        font-family: 'Zen Antique Soft', sans-serif;
+        margin: 40px auto 30px auto;
+        padding: 5px;
+        color: white;
+        background-color: #3B0B11;
+        border-radius: 8px;
+    }   
+}
+.actions-login input:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+}
+// app/views/users/registrations/new.html.erb
+.actions-user-new {
+    input[type="submit"] {
+        width: 180px;
+        display: table;
+        font-size: 24px;
+        font-family: 'Zen Antique Soft', sans-serif;
+        margin: 40px auto 30px auto;
+        padding: 5px;
+        color: white;
+        background-color: #3B0B11;
+        border-radius: 8px;
+    }   
+}
+.actions-user-new input:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+}
+
+.field {
+    text-align: center;
+    font-size: 28px;
+    margin: 0 auto 30px auto;
+}
+
+.field input {
+    background-color: none;
+    width: 300px;
+    height: 40px;
+    font-size: 60%;
+    margin-top: 10px;
+}
+
+.field input[type="checkbox"] {
+    margin-top: -5px;
+    width: 25px;
+    height: 25px;
+}
+
+.field input:focus {
+    outline: 0;
+}
+
+.user_link_to {
+    font-size: 24px;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 50px;
+}
+.user_link_to a:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+}
+// app/views/users/sessions/new.html.erb
+.user_link_to-login {
+    font-size: 24px;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+.user_link_to-login a:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+}
+// app/views/users/registrations/new.html.erb
+.user_link_to-user-new {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 40px;
+    // left: 625px;
+    // bottom: 30px;
+    // position: absolute;
+}
+.user_link_to-user-new a:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+}
+
+
+// ユーザマイページ
+.user-info {
+    // text-align: center;
+    margin-left: 60px;
+}
+.user-info h3 {
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.user-info-show .user-info-img1 img {
+  object-fit: cover;
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+  border: solid 2px rgba($color: rgb(174, 174, 174), $alpha: 0.3);
+//   position: relative;
+//   display: block;
+//   margin: auto;
+}
+
+.user-info-show{
+    display: flex;
+}
+.user-info-text {
+    font-family: 'Noto Sans Japanese', 'Noto Sans', sans-serif;
+    background-color: #F1EBE4;
+    border-radius: 10px;
+    padding: 20px;
+}
+.user-info-text p {
+    font-size: 18px;
+    margin-top: 15px;
+    width: 510px;
+}
+
+.user-info-img2 {
+    margin-left: 100px;
+}
+
+.user-show-link {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.user-show-link a {
+    font-size: 18px;
+    margin-right: 20px;
+}
+.user-show-link a:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+}
+
+.tomorecipe-blank {
+    background-color: #F1EBE4;
+    margin-top: -100px;
+    margin-bottom: -10px;
+    height: 100px;
+}
+
+
+// レシピ一覧
+.tomorecipes-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: calc(100% * 0.8);
+  }
+  
+  .tomorecipe {
+    width: 320px;
+    height: auto;
+    background-color: white;
+    margin-top: 24px;
+    margin-right: 24px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .tomorecipe img {
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: solid 2px rgba($color: rgb(174, 174, 174), $alpha: 0.3);
+    position: relative;
+    display: block;
+    margin: auto;
+  }
+  .tomorecipe-main-img:hover {
+    opacity: 0.75;
+  }
+  
+  .tomorecipe-info {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    line-height: 20px
+  }
+  
+  .tomorecipe-title-save {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tomorecipe-title {
+    width: 250px;
+  }
+  
+  .tomorecipe-save {
+    text-align: right;
+  }
+  
+  .tomorecipe-save .already-heart {
+    color: rgb(249, 115, 138);
+  }
+  .tomorecipe-save i:hover {
+    color: rgb(249, 115, 138);
+    font-weight: bold;
+  }
+  
+  .tomorecipe-user {
+    background-color: rgba($color: #F1EBE4, $alpha: 0.75);
+    border-radius: 10px;
+    position: absolute;
+    padding: 5px;
+    margin-top: -85px;
+    margin-left: 13px;
+  }
+  .tomorecipe-user-non-icon {
+    background-color: rgba($color: #F1EBE4, $alpha: 0.75);
+    border-radius: 5px;
+    position: absolute;
+    padding: 5px;
+    margin-top: -30px;
+    margin-left: 13px;
+  }
+  
+  .tomorecipe-user .user-icon {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+  }
+  .tomorecipe-user .user-icon:hover {
+    opacity: 0.7;
+  }
+  .tomorecipe-user a:hover {
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+  }
+  .tomorecipe-user-non-icon a:hover {
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+  }
+  
+  .tomorecipe-hashtag a {
+    padding-right: 5px;
+  }
+  .tomorecipe-hashtag a:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+  }
+  
+  .tomorecipe-edit {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .tomorecipe-edit a {
+    padding-left: 10px;
+  }
+  .tomorecipe-edit a:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+  }
+  
+  .external-url a:hover {
+    text-decoration: underline;
+    color: rgb(236, 113, 8);
+    font-weight: bold;
+  }
+ 
+/*.field{
+    input[type="file"] {
+      width: 300px;
+      font-size: 20px;
+      font-family: 'Zen Antique Soft', sans-serif;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      color: white;
+      background-color: #3B0B11;
+    }
+}*/

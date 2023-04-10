@@ -1,0 +1,428 @@
+// Place all the styles related to the tomorecipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// 検索項目
+.tomorecipes-search-items {
+  text-align: center;
+  //background-color: #FAF4ED;
+}
+
+.tomorecipes-search-items h3 {
+  color: #3B0B11;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: -8px;
+}
+
+.tomorecipes-search-category {
+  display: flex;
+  justify-content: center;
+}
+.tomorecipes-search-category h3 {
+  margin-top: 10px;
+}
+.tomorecipes-search-category ul {
+  background-color: #3B0B11;
+  height: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding-top:10px;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.tomorecipes-search-category a {
+  color: white;
+  font-size: 18px;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+.tomorecipes-search-category a:hover {
+  text-decoration: underline;
+  color: rgb(236, 113, 8);
+  font-weight: bold;
+}
+
+.tomorecipes-search {
+  margin-top: 10px;
+}
+.tomorecipes-search-text {
+  text-decoration: none;
+  display: flex;
+  margin-left: 20px;
+  margin-top: -10px;
+  margin-bottom: 40px;
+}
+.tomorecipes-search-text a {
+  padding-right: 16px;
+}
+
+.tomorecipes-search-img1 {
+  transform: scale(-1, 1);
+  margin-right: 80px;
+  margin-top: -100px;
+  margin-bottom: -100px;
+}
+.tomorecipes-search-img2 {
+  margin-left: 80px;
+  margin-top: -100px;
+  margin-bottom: -100px;
+}
+
+.tomorecipes-search {
+  display: flex;
+  justify-content: center;
+}
+.tomorecipes-search h3 {
+  margin-top: 8px;
+}
+.search-box {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  width: 600px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+  flex-grow: 1;
+  padding: 0.7rem 0 0.7rem 0.8rem;
+  border: 1px solid #3B0B11;
+}
+
+.search-box button {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  padding: .5rem .6rem .5rem .6rem;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+  background-color: #3B0B11;
+  height: 39px;
+}
+
+.fa-search {
+  font-size: 20px;
+}
+
+.search-box button:hover {
+  // color: #4eadb8;
+  background-color: #66452F;
+}
+
+.tomorecipes-search-hashtag {
+  margin-bottom: 30px;
+  width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tomorecipes-search-hashtag a {
+  line-height: 22px;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.tomorecipes-search-hashtag a:hover {
+  text-decoration: underline;
+  color: rgb(236, 113, 8);
+  font-weight: bold;
+}
+
+.tomorecipes-hashtag-allergy {
+  text-align:left
+}
+.tomorecipes-hashtag-allergy h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 200px;
+}
+.tomorecipes-hashtag-allergy p {
+  width: 690px;
+  margin-top: 10px;
+  margin-left: 220px;
+  font-family: 'Noto Sans Japanese', 'Noto Sans', sans-serif;
+}
+
+.tops .wave1 img {
+  width: 1440px;
+}
+
+.tomorecipes-body {
+  background-color: #F1EBE4;
+  margin-top: -180px;
+  margin-bottom: 100px;
+}
+
+.tomorecipes-body h3 {
+  color: #3B0B11;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+// レシピ一覧
+.tomorecipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: calc(100% * 0.8);
+}
+
+.tomorecipe {
+  width: 320px;
+  height: auto;
+  background-color: white;
+  margin-top: 24px;
+  margin-right: 24px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tomorecipe img {
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  border: solid 2px rgba($color: rgb(174, 174, 174), $alpha: 0.3);
+  position: relative;
+  display: block;
+  margin: auto;
+}
+.tomorecipe-main-img:hover {
+  opacity: 0.75;
+}
+
+.tomorecipe-info {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  line-height: 20px
+}
+
+.tomorecipe-title-save {
+  display: flex;
+  justify-content: space-between;
+}
+.tomorecipe-title {
+  width: 250px;
+}
+
+.tomorecipe-save {
+  text-align: right;
+}
+
+.tomorecipe-save .already-heart {
+  color: rgb(249, 115, 138);
+}
+.tomorecipe-save i:hover {
+  color: rgb(249, 115, 138);
+  font-weight: bold;
+}
+
+.tomorecipe-user {
+  background-color: rgba($color: #F1EBE4, $alpha: 0.75);
+  border-radius: 10px;
+  position: absolute;
+  padding: 5px;
+  margin-top: -85px;
+  margin-left: 13px;
+}
+.tomorecipe-user-non-icon {
+  background-color: rgba($color: #F1EBE4, $alpha: 0.75);
+  border-radius: 5px;
+  position: absolute;
+  padding: 5px;
+  margin-top: -30px;
+  margin-left: 13px;
+}
+
+.tomorecipe-user .user-icon {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+}
+.tomorecipe-user .user-icon:hover {
+  opacity: 0.7;
+}
+.tomorecipe-user a:hover {
+  color: rgb(236, 113, 8);
+  font-weight: bold;
+}
+.tomorecipe-user-non-icon a:hover {
+  color: rgb(236, 113, 8);
+  font-weight: bold;
+}
+
+.tomorecipe-hashtag a {
+  padding-right: 5px;
+}
+.tomorecipe-hashtag a:hover {
+  text-decoration: underline;
+  color: rgb(236, 113, 8);
+  font-weight: bold;
+}
+
+.tomorecipe-edit {
+  display: flex;
+  justify-content: flex-end;
+}
+.tomorecipe-edit a {
+  padding-left: 10px;
+}
+.tomorecipe-edit a:hover {
+  text-decoration: underline;
+  color: rgb(236, 113, 8);
+  font-weight: bold;
+}
+
+.external-url a:hover {
+  text-decoration: underline;
+  color: rgb(236, 113, 8);
+  font-weight: bold;
+}
+
+.tomorecipes-paginate {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -100px;
+  height: 80px;
+  background-color: #F1EBE4;
+  font-size: 16px;
+  font-family: 'Noto Sans Japanese', 'Noto Sans', sans-serif;
+  line-height: 24px;
+}
+
+.externals-paginate {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -100px;
+  height: 80px;
+  background-color: #F1EBE4;
+  font-size: 16px;
+  font-family: 'Noto Sans Japanese', 'Noto Sans', sans-serif;
+  line-height: 24px;
+}
+
+
+// 投稿
+.post1 {
+  text-align: right;
+  padding-top: 30px;
+  padding-right: 30px;
+  margin-bottom: -180px;
+}
+.post2 {
+  text-align: left;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  margin-top: -200px;
+}
+
+.tomorecipe-post {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 20px
+}
+
+.tomorecipe-post-h1 {
+  margin-bottom: 60px;
+}
+
+.tomorecipe-post h3 {
+  color: #3B0B11;
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.tomorecipe-post p {
+  font-family: 'Noto Sans Japanese', 'Noto Sans', sans-serif;
+}
+
+.hashtag_attention {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 24px;
+  background-color: #F1EBE4;
+  border-radius: 10px;
+  padding: 25px;
+}
+.hashtag_attention h3 {
+  margin-top: 0px;
+}
+.hashtag_attention p {
+  text-align: start;
+  margin-top: 10px;
+}
+
+.post-field {
+  font-size: 28px;
+  margin: 0 auto 30px auto;
+}
+.post-field input {
+  margin-top: 10px;
+  background-color: none;
+  width: 380px;
+  height: 30px;
+  font-size: 60%;
+}
+.post-field input:focus {
+  outline: 0;
+}
+
+.post-hashtag-field {
+  font-size: 28px;
+  margin: 0 auto 10px auto;
+}
+.post-hashtag-field input {
+  background-color: none;
+  width: 520px;
+  height: 30px;
+  font-size: 60%;
+}
+.post-hashtag-field input:focus {
+  outline: 0;
+}
+
+.image-field {
+  font-size: 28px;
+  margin: 0 auto 30px auto;
+}
+.image-field input {
+  margin-top: 10px;
+  background-color: none;
+  height: 30px;
+  font-size: 55%;
+}
+
+.field-area {
+  margin-bottom: 10px;
+}
+
+.actions-submit {
+  input[type="submit"] {
+      width: 140px;
+      display: table;
+      font-size: 24px;
+      font-family: 'Zen Antique Soft', sans-serif;
+      margin: 40px auto 30px auto;
+      padding: 5px;
+      color: white;
+      background-color: #3B0B11;
+      border-radius: 8px;
+  }   
+}
+.actions-submit input:hover {
+  text-decoration: underline;
+  color: rgb(236, 113, 8);
+  font-weight: bold;
+}
